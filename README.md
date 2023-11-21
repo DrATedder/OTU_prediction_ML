@@ -34,8 +34,32 @@ The data has the following columns:
 ## 2. Run the ML model
 `ML_RandomForest_OTU_prediction.py` Requires the data generated in step 1, and data must be split into `training` and `test` directories (specified in the script). The model will use the numeric only variables (i.e. `name`, `genus` and `taxRank` are dropped). Per `test` sample performance metrics are provided, along with `overall` metrics. A `Confusion Matrix` is also produced (printed to screen).
 
+## Example output
+
+### Overall Performance Metrics:
+
+**Overall Accuracy:** 0.9985252439759422
+
+### Overall Classification Report:
+
+| Class | precision | recall | f1-score | support |
+| --- | --- | --- | --- | --- |
+| absence | 1.00 | 1.00 | 1.00 | 77728 |
+| presence | 0.80 | 0.72 | 0.76 | 251 |
+| accuracy |     |     | 1.00 | 77979 |
+| macro avg | 0.90 | 0.86 | 0.88 | 77979 |
+| weighted avg | 1.00 | 1.00 | 1.00 | 77979 |
+
+### Confusion matrix:
+![confusion_matrix](https://github.com/DrATedder/OTU_prediction_ML/blob/1403a9a9f794bc7d514c462da94a13f970aeb7f2/images/confusion_matrix.png)
+
+
 ## 3. Check important features
 `ML_features.py` Determines which of the data features (based on the `training` data set) is driving the model. Requires the location of the directory housing the training data set only, and produces a `bar chart`.
+
+## Example output
+
+![Important_features](https://github.com/DrATedder/OTU_prediction_ML/blob/1403a9a9f794bc7d514c462da94a13f970aeb7f2/images/important_factors.png)
 
 
 ### Note
