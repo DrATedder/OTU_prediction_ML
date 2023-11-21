@@ -36,3 +36,7 @@ The data has the following columns:
 
 ## 3. Check important features
 `ML_features.py` Determines which of the data features (based on the `training` data set) is driving the model. Requires the location of the directory housing the training data set only, and produces a `bar chart`.
+
+
+### Note
+The scripts were developed in `Jupyter Notebook` and have not been robustly tested in command line python.
