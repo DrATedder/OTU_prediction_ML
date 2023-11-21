@@ -32,7 +32,13 @@ The data has the following columns:
 **Note:** Script uses biopython to query NCBI to match taxIDs. You will likely need to give your Entrez details (minimum: email).
 
 ## 2. Run the ML model
-`ML_RandomForest_OTU_prediction.py` Requires the data generated in step 1, and data must be split into `training` and `test` directories (specified in the script). The model will use the numeric only variables (i.e. `name`, `genus` and `taxRank` are dropped). Per `test` sample performance metrics are provided, along with `overall` metrics. A `Confusion Matrix` is also produced (printed to screen).
+
+There are two different models available, both require the data generated in step 1, and data must be split into `training` and `test` directories (specified in the script). The model will use the numeric only variables (i.e. `name`, `genus` and `taxRank` are dropped). Per `test` sample performance metrics are provided, along with `overall` metrics. A `Confusion Matrix` is also produced (printed to screen).
+
+1. `ML_RandomForest_OTU_prediction.py` Runs a [RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) model.
+2. `ML_LogisticRegression_OTU_prediction.py` employs a basic [Logistic Regression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) model.
+
+You can run either or both models, and then compare them in later steps.
 
 ## Example output
 
