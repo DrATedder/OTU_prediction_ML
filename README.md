@@ -67,6 +67,13 @@ You can run either or both models, and then compare them in later steps.
 
 ![Important_features](https://github.com/DrATedder/OTU_prediction_ML/blob/1403a9a9f794bc7d514c462da94a13f970aeb7f2/images/important_factors.png)
 
+## 4. Compare model performance
+`compare_ML_models.py` will calculate basic model statistics (also seen in the output of the individual models), along with plotting ROC curves and calculating AUC scores to aid in evaluation. Requires the location of your `test data` directory.
+
+## Example output
+
+![ROC curve with AUC score](https://github.com/DrATedder/OTU_prediction_ML/blob/4fd759f06588a24ecfe3d9bee584ebc7302236dd/images/ROC_AUC.png)
+
 
 ### Note
 The scripts were developed in `Jupyter Notebook` and have not been robustly tested in command line python.
